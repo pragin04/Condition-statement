@@ -3,10 +3,13 @@ public class Main
 {
 	public static void main(String[] args) {
 	    Scanner sc= new Scanner(System.in);
-	    int n=sc.nextInt();
-	    String c=(n%2==0)?"odd":"even";
-	    System.out.println(c);
-	    
+	    int a=sc.nextInt();
+	   if(a%2==0){
+	       System.out.println("odd");
+	   }else{
+	       System.out.println("even");
+	   }
+	   
 	
 	}
 }
