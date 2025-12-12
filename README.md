@@ -1,1 +1,1 @@
-# Condition-opertor
+# Condition statement
