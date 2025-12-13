@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first side: ");
+        double a = sc.nextDouble();
+
+        System.out.print("Enter second side: ");
+        double b = sc.nextDouble();
+
+        System.out.print("Enter third side: ");
+        double c = sc.nextDouble();
+
+        if (a + b > c && a + c > b && b + c > a) {
+            double max = Math.max(a, Math.max(b, c));
+            double sumSquares;
+
+            if (max == a) {
+                sumSquares = b * b + c * c;
+            } else if (max == b) {
+                sumSquares = a * a + c * c;
+            } else {
+                sumSquares = a * a + b * b;
+            }
+            if (Math.abs(max * max - sumSquares) < 1e-6) { 
+                System.out.println("It is a Right-Angled Triangle");
+            } else {
+                System.out.println("It is NOT a Right-Angled Triangle");
+            }
+
+        } else {
+            System.out.println("The sides do not form a valid triangle");
+        }
+
+        sc.close();
+    }
+}
